@@ -12,6 +12,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 module.exports = {
     plugins: [
         tailwindcss("./tailwind.js"),
+        require('autoprefixer'),
         ...(
             // Conditionally add prod plugins
             process.env.NODE_ENV === "production"
